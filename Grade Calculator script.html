@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+    <title> Grade Average Calculator </title>
+</head>
+
+<body>
+
+<p>
+    <h2>Grade Average Calculator</h2>
+    <h3>Please Enter Your Grade For Each Section</h3>
+    <TABLE BORDER=2 CELLSPACING=2 CELLPADDING=2>
+
+    <tr>
+    <td>Type</td>
+    <td>Weight</td>
+    <td>Grade</td>
+    </tr>
+
+    <tr>
+    <td>Lab 1</td>
+    <td>5%</td>
+    <td><input type="text" id="lab1" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Lab 2</td>
+    <td>5%</td>
+    <td><input type="text" id="lab2" size=2 value=""></td>
+    </tr>
+		
+	<tr>
+    <td>Lab 3</td>
+    <td>5%</td>
+    <td><input type="text" id="lab3" size=2 value=""></td>
+    </tr>
+	
+	<tr>
+    <td>Lab 4</td>
+    <td>5%</td>
+    <td><input type="text" id="lab4" size=2 value=""></td>
+    </tr>	
+	
+	<tr>
+    <td>Lab 5</td>
+    <td>5%</td>
+    <td><input type="text" id="lab5" size=2 value=""></td>
+    </tr>
+	
+	<tr>
+    <td>Lab 6</td>
+    <td>5%</td>
+    <td><input type="text" id="lab6" size=2 value=""></td>
+    </tr>
+		
+	<tr>
+    <td>Lab 7</td>
+    <td>5%</td>
+    <td><input type="text" id="lab7" size=2 value=""></td>
+    </tr>	
+	
+	<tr>
+    <td>Lab 8</td>
+    <td>5%</td>
+    <td><input type="text" id="lab8" size=2 value=""></td>
+    </tr>
+		
+    <tr>
+    <td>Lab Exam</td>
+    <td>10%</td>
+    <td><input type="text" id="midterm" size=2 value=""></td>
+    </tr>
+
+    <tr>
+    <td>Lecture Exam 1</td>
+    <td>25%</td>
+    <td><input type="text" id="finals1" size=2 value=""></td>
+    </tr>
+		
+	<tr>
+    <td>Lecture Exam 2</td>
+    <td>25%</td>
+    <td><input type="text" id="finals2" size=2 value=""></td>
+    </tr>	
+
+    <br><br>
+</p>
+    <input type="button" value="Calculate Your Grade"
+        onclick="calculator()">
+
+    <hr>
+    <div id="outputDiv" style="height: 50px; width: 100%;"></div>
+
+    <script type="text/javascript">
+
+        function calculator()
+        {
+            var grade1=parseFloat(document.getElementById('lab1').value*0.05);
+			var grade2=parseFloat(document.getElementById('lab2').value*0.05);
+			var grade3=parseFloat(document.getElementById('lab3').value*0.05);
+			var grade4=parseFloat(document.getElementById('lab4').value*0.05);
+			var grade5=parseFloat(document.getElementById('lab5').value*0.05);
+			var grade6=parseFloat(document.getElementById('lab6').value*0.05);
+			var grade7=parseFloat(document.getElementById('lab7').value*0.05);
+			var grade8=parseFloat(document.getElementById('lab8').value*0.05);
+			
+            var grade9=parseFloat(document.getElementById('midterm').value*0.10);
+            var grade10=parseFloat(document.getElementById('finals1').value*0.25);
+			var grade11=parseFloat(document.getElementById('finals2').value*0.25);
+            var total=grade1+grade2+grade3+grade4+grade5+grade6+grade7+grade8+grade9+grade10+grade11;
+
+            var display=document.getElementById('outputDiv');
+
+            display.innerHTML='Your Final Grade Is: ' +total;
+        }
+    </script>
